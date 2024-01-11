@@ -7,5 +7,5 @@ df = conn.read()
 
 st.title('Latest Updates')
 
-for row in df.itertuples():
+for row in df.head(5).itertuples():
     st.write(f"**{row.filename}** was uploaded on {row.date}")
